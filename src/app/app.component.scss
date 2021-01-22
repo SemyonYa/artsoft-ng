@@ -1,0 +1,32 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  &-inner {
+    flex: 0 1 1280px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .06);
+    box-sizing: border-box;
+    padding: 20px;
+
+    h1 {
+      color: #333;
+      border-bottom: solid 1px #ccc;
+      padding-bottom: 5px;
+    }
+
+    .messages {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      app-message {
+        border-radius: 6px;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .06);
+      }
+    }
+  }
+}

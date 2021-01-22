@@ -1,0 +1,72 @@
+[
+  {
+    "id": 100,
+    "parent_id": null,
+    "datetime": "2021-01-11T12:00:00",
+    "author_name": "Ivan",
+    "body": "Body parent 1"
+  },
+  {
+    "id": 101,
+    "parent_id": 100,
+    "datetime": "2021-01-11T12:00:26",
+    "author_name": "Kolya",
+    "body": "Body 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, illo?"
+  },
+  {
+    "id": 102,
+    "parent_id": 100,
+    "datetime": "2021-01-11T12:10:00",
+    "author_name": "",
+    "body": "Body 3: Lorem ipsum dolor sit amet consectetur."
+  },
+  {
+    "id": 103,
+    "parent_id": 102,
+    "datetime": "2021-01-11T12:11:11",
+    "author_name": "",
+    "body": "Body 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, illo?"
+  },
+  {
+    "id": 104,
+    "parent_id": 102,
+    "datetime": "2021-01-11T13:00:00",
+    "author_name": "",
+    "body": "Body 5: Lorem ipsum dolor sit amet consectetur."
+  },
+  {
+    "id": 105,
+    "parent_id": null,
+    "datetime": "2021-01-11T15:00:00",
+    "author_name": "Ivan",
+    "body": "Body parent 2"
+  },
+  {
+    "id": 106,
+    "parent_id": 105,
+    "datetime": "2021-01-12T12:00:26",
+    "author_name": "Kolya",
+    "body": "Body 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, illo?"
+  },
+  {
+    "id": 107,
+    "parent_id": 105,
+    "datetime": "2021-01-12T12:16:00",
+    "author_name": "",
+    "body": "Body 3: Lorem ipsum dolor sit amet consectetur."
+  },
+  {
+    "id": 108,
+    "parent_id": 102,
+    "datetime": "2021-01-13T12:11:11",
+    "author_name": "",
+    "body": "Body 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, illo?"
+  },
+  {
+    "id": 109,
+    "parent_id": 102,
+    "datetime": "2021-01-13T23:00:00",
+    "author_name": "",
+    "body": "Body 5: Lorem ipsum dolor sit amet consectetur."
+  }
+]

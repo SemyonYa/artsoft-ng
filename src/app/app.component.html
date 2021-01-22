@@ -1,0 +1,9 @@
+<div class="wrap">
+  <div class="wrap-inner">
+    <h1>{{title}}</h1>
+    <div class="messages">
+      <app-message *ngFor="let message of messages; let index = index" [message]="message" class="messages-item"
+        [ngStyle]="{marginLeft: index * 10 + 'px'}"></app-message>
+    </div>
+  </div>
+</div>
