@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MessageResponse } from 'src/app/models/message-response';
 
 @Component({
@@ -8,4 +8,9 @@ import { MessageResponse } from 'src/app/models/message-response';
 })
 export class MessageComponent {
   @Input() message: MessageResponse;
+  @Output() showNewMessage = new EventEmitter<MessageResponse>();
+
+  commentOnMessage(message: MessageResponse) {
+    this.showNewMessage.emit(message);
+  }
 }

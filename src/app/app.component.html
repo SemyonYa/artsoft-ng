@@ -1,9 +1,26 @@
 <div class="wrap">
   <div class="wrap-inner">
-    <h1>{{title}}</h1>
+    <h1>{{title}} <img src="/assets/icons/pencil-outline.svg" (click)="showNewMessage()"></h1>
     <div class="messages">
-      <app-message *ngFor="let message of messages; let index = index" [message]="message" class="messages-item"
-        [ngStyle]="{marginLeft: index * 10 + 'px'}"></app-message>
+      <ng-container *ngFor="let message of messages" [ngTemplateOutlet]="messageTemplate"
+        [ngTemplateOutletContext]="{message: message}">
+      </ng-container>
+    </div>
+    <div class="clear">
+      <span (click)="clear()"> Clear local storage</span>
     </div>
   </div>
 </div>
+
+<ng-template #messageTemplate let-message="message">
+  <app-message [message]="message" [ngClass]="{'messages-item': true, 'parent': message.level == 0}"
+    [ngStyle]="{marginLeft: 20 * message.level + 'px'}" (showNewMessage)="showNewMessage($event)"></app-message>
+  <ng-container *ngFor="let child of message.children">
+    <ng-container [ngTemplateOutlet]="messageTemplate" [ngTemplateOutletContext]="{message: child}">
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<div *ngIf="newMessageVisible" class="back" (click)="hideNewMessage()" @opacityAnimation></div>
+<app-new-message *ngIf="newMessageVisible" [parent]="parent" (hideWindow)="hideNewMessage()"
+  (sendMessage)="sendMessage($event)" @pageAnimation></app-new-message>

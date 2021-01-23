@@ -1,3 +1,39 @@
 .wrap {
   padding: 10px 20px;
+  border-left: solid 1px #eee;
+
+  .author {
+    font-weight: 600;
+    color: #00a383;
+
+    span {
+      font-size: 11px;
+      padding: 0px 10px;
+      border-radius: 6px;
+      background-color: #00a383;
+      color: whitesmoke;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    &.text {
+      font-size: 16px;
+      color: #495c58;
+
+      span {
+        color: #ccc;
+      }
+    }
+  }
+
+  .comment {
+    span {
+      font-size: 12px;
+      text-decoration: underline;
+      color: #a64100;
+      cursor: pointer;
+    }
+  }
 }

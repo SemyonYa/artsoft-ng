@@ -1,0 +1,14 @@
+<div class="wrap">
+    <h2 *ngIf="!parent">New message</h2>
+    <div *ngIf="parent" class="parent">
+        <h2>Comment on the message</h2>
+        <p>{{parent.body}}</p>
+    </div>
+    <p><strong>Text</strong></p>
+    <textarea [(ngModel)]="text" rows="6"></textarea>
+    <p>Author</p>
+    <input type="text" [(ngModel)]="author">
+    <div class="buttons">
+        <button *ngIf="buttonVisible" (click)="send()" @pageAnimation>Send</button>
+    </div>
+</div>
